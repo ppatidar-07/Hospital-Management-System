@@ -277,9 +277,6 @@ class Hospital:
             self.fetch_data()
 
 
-
-
-
     def fetch_data(self):
         conn=mysql.connector.connect(host='localhost', username='root', password='@p@a@l@a@k@3005', database='mydata')
         my_cursor=conn.cursor()
@@ -291,6 +288,7 @@ class Hospital:
                 self.hospital_table.insert("",END,values=i)
             conn.commit()
         conn.close()
+
 
     def get_cursor(self,event=""):
         cursor_row=self.hospital_table.focus()
@@ -371,44 +369,6 @@ class Hospital:
             return
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 root=Tk()
 ob=Hospital(root)
 root.mainloop()
-
