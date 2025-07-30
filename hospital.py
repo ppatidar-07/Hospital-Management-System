@@ -219,10 +219,11 @@ class Hospital:
     #......................................functionality declaration......................
     def iPrescriptionData(self):
         
-        if self.Nameoftablets.get() =="" or self.ref.get() =="":
+      if self.Nameoftablets.get() =="" or self.ref.get() =="":
             print("empty")
             messagebox.showerror("Error","All fields are required")
-        else:
+      else:
+          try:
             conn=mysql.connector.connect(host='localhost', username='root', password='@p@a@l@a@k@3005', database='mydata')
             print("inserting")
             my_cursor=conn.cursor()
@@ -248,6 +249,8 @@ class Hospital:
             conn.close()
             
             messagebox.showinfo("Success","Data Inserted Successfully!")
+          except Exception as e:
+              messagebox.showerror("Database Error", str(e))
 
     def update_data(self):
             conn=mysql.connector.connect(host="localhost",username="root",password="@p@a@l@a@k@3005",database="mydata")
