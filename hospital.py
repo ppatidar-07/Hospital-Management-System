@@ -33,7 +33,7 @@ class Hospital:
 
 
 
-        lbltitle=Label(self.root,bd=10,relief=RIDGE,text="Hospital Management System",fg="red",bg="white",font=("Times new roman",50,"bold"))
+        lbltitle=Label(self.root,bd=10,relief=RIDGE,text="Hospital Management System",fg="#d32f2f",bg="white",font=("Times new roman",50,"bold"))
         lbltitle.pack(side=TOP,fill=X)
 
     #  ............................Dataframe.................................................
